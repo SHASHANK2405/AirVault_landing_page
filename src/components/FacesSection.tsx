@@ -4,14 +4,13 @@ const FacesSection = () => {
   return (
     <div className="w-full h-[1300px] bg-[#FFFFFF]">
       <div className="w-full h-[1043px] flex flex-col gap-[48px] mt-[116px] mb-[141px]">
-        <div className="w-[80%] h-[287px] flex flex-col items-center p-2 gap-[32px] mx-auto">
-          <p className="w-full h-[80px] font-semibold text-[68px] leading-[80px] text-center text-gradient-to-r from-gray-500 via-gray-700 to-gray-500">
+        <div className="w-[896px] h-[287px] flex flex-col items-center p-2 gap-[32px] mx-auto">
+          <p className="w-[896px] h-[80px] font-semibold text-[68px] leading-[80px] text-center text-gradient-to-r from-gray-500 via-gray-700 to-gray-500">
             We know the faces you love
           </p>
           <p className="w-full h-[60px] font-medium text-[22px] leading-[30px] text-center text-[#3D3D3D]">
             AirVault uses AI to find your loved ones, across all your memories.
-            Letting you live those <br /> happy moments that truly happen only
-            once.
+            Letting you live those happy moments that truly happen only once.
           </p>
           <button className="w-[188px] h-[49px] py-[12px] px-[24px] gap-[10px] rounded-[67px] bg-[#FF6A00]">
             <span className="font-manrope text-[18px] font-semibold leading-[24.59px] text-center text-[#F9F9F9]">

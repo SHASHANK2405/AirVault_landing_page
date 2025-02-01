@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const LastSection = () => {
   return (
-    <div className="w-[90%] h-[1432px] flex flex-col gap-[48px] items-center mx-auto">
+    <div className="w-[1152px] h-[1432px] flex flex-col gap-[48px] items-center mx-auto">
       <p className="w-[836px] h-[88px] font-medium text-[32px] leading-[44px] text-center text-[#31323D]">
         Explore our wide selection of products that help you preserve your
         memories, in your own style.
@@ -19,6 +19,7 @@ const LastSection = () => {
             }
             BoldText2={"explore the world with just your phone"}
             PlainText3={""}
+            Text={"AirVaultCloud"}
           />
           <Card
             GradientText={"AirVault Go"}
@@ -29,6 +30,7 @@ const LastSection = () => {
             PlainText3={
               "so you can take them with you even on the craziest of adventures."
             }
+            Text={"AirVaultGo"}
           />
         </div>
         <div className="relative w-[1152px] h-[640px] rounded-[48px] bg-[#FFFFFF] flex">
@@ -41,6 +43,7 @@ const LastSection = () => {
             }
             BoldText2={""}
             PlainText3={""}
+            Text={""}
           />
           <img
             src="/assets/AirVaultPro.png"

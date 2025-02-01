@@ -11,7 +11,7 @@ const HeroSection = () => {
         height={24}
         className=""
       />
-      <div className="sm:w-[80%] w-[98%] sm:h-[287px] h-[303px] flex flex-col items-center sm:p-2 p-0 sm:gap-[32px] gap-[24px] mx-auto">
+      <div className="sm:w-[958px] w-[98%] sm:h-[287px] h-[303px] flex flex-col items-center sm:p-2 p-0 sm:gap-[32px] gap-[24px] mx-auto">
         <p className="w-full sm:h-[160px] h-[150px] font-semibold sm:text-[68px] text-[36px] sm:leading-[80px] leading-[50px] text-center text-gradient-to-r from-gray-500 via-gray-700 to-gray-500">
           Your photo gallery is a mess!
           <br />
@@ -21,7 +21,7 @@ const HeroSection = () => {
           AirVault is the easiest way to capture and relive your memories.
         </p>
         <button className="w-[188px] h-[49px] py-[12px] px-[24px] gap-[10px] rounded-[67px] bg-[#FF6A00]">
-          <span className="font-manrope text-[18px] font-semibold leading-[24.59px] text-center text-[#F9F9F9]">
+          <span className="text-[18px] font-semibold leading-[24.59px] text-center text-[#F9F9F9]">
             Try AirVault now
           </span>
         </button>
