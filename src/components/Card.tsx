@@ -34,8 +34,8 @@ const Card: React.FC<CardProps> = ({
       : "bg-gradient-to-r from-[#4873FF] via-[#593CFF] to-[#FF3CCB]";
 
   return (
-    <div className="w-[568px] h-[640px] rounded-[48px] bg-[#FFFFFF] p-[60px] flex flex-col gap-[24px] relative">
-      <p className="w-[448px] h-[165px] text-left text-[40px] leading-[55px] font-medium text-[#58585C]">
+    <div className="sm:w-[568px] w-[343px] sm:h-[640px] min-h-[700px] rounded-[48px] bg-[#FFFFFF] sm:p-[60px] p-[24px] flex flex-col gap-[24px] relative overflow-hidden">
+      <p className="sm:w-[448px] w-[295px] sm:h-[165px] h-[196px] text-left sm:text-[40px] text-[36px] mt-[40px] sm:leading-[55px] leading-[50px] font-medium text-[#58585C]">
         <span
           className={clsx(
             gradientClass,
@@ -49,8 +49,10 @@ const Card: React.FC<CardProps> = ({
       </p>
       <p
         className={clsx(
-          "font-medium text-[22px] leading-[30px] text-[#64667A]",
-          Text === "AirVaultGo" ? "w-[285px] h-[150px]" : "w-[448px] h-[90px]"
+          "font-medium sm:text-[22px] text-[18px] sm:leading-[30px] leading-[24px] text-[#64667A]",
+          Text === "AirVaultGo"
+            ? "sm:w-[285px] w-[198px] sm:h-[150px] h-[175px]"
+            : "sm:w-[448px] w-[295px] sm:h-[90px] h-[75px]"
         )}
       >
         {PlainText2}{" "}
@@ -67,9 +69,10 @@ const Card: React.FC<CardProps> = ({
         <img
           src="/assets/AirVaultCloud.png"
           alt="AirVaultCloud"
-          width={234}
-          height={480}
-          className="absolute top-[323px] left-[335px] rounded-br-[48px]"
+          className="absolute w-[272px] h-[557px] sm:w-[234px] sm:h-[480px] 
+                     sm:top-[363px] sm:left-[335px] top-[766px] left-[165px] 
+                     sm:translate-x-0 sm:translate-y-0 -translate-x-1/2 -translate-y-1/2 
+                     sm:rounded-br-[48px] z-10 "
         />
       )}
       {Text === "AirVaultGo" && (
@@ -78,7 +81,9 @@ const Card: React.FC<CardProps> = ({
           alt="AirVaultGo"
           width={313}
           height={358}
-          className="absolute top-[160px] left-[256px]"
+          className="sm:w-[313px] sm:h-[358px] w-[236.6px] h-[339px] absolute sm:top-[160px] sm:left-[256px] top-[340.5px] left-[220px] 
+                     sm:translate-x-0 sm:translate-y-0 -translate-x-1/2 -translate-y-1/2 
+                     z-10"
         />
       )}
     </div>

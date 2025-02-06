@@ -24,7 +24,7 @@ const MemoriesTrackSection = () => {
       <img
         src="/assets/Mobile.png"
         alt="Mobile"
-        className="sm:w-[880.36px] sm:h-[1040px] w-[343px] h-[538px]"
+        className="sm:w-[880.36px] sm:h-[1040px] w-[343px] h-[432px]"
       />
     </div>
   );

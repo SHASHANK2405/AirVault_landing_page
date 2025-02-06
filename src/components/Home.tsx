@@ -15,12 +15,21 @@ const Home = () => {
         <title>AirVault</title>
         <meta name="description" content="A modern landing page" />
       </Head>
-      <HeroSection />
-      <MemoriesTrackSection />
+
+      {/* Main Wrapper with Max Width */}
+      <div className="max-w-[1280px] w-full mx-auto flex flex-col gap-10">
+        <HeroSection />
+        <MemoriesTrackSection />
+      </div>
       <FacesSection />
-      <MomentsSection />
-      <ImagesMovesSection />
-      <LastSection />
+
+      <div className="max-w-[1280px] w-full mx-auto flex flex-col gap-16">
+        <MomentsSection />
+        <ImagesMovesSection />
+        <LastSection />
+      </div>
+
+      {/* FacesSection OUTSIDE the Wrapper */}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from "react"; // Import React
 
 const HeroSection = () => {
   return (
-    <div className="w-full sm:h-[580px] h-[812px] flex flex-col sm:px-[63px] px-[20px] py-[24px] sm:gap-[120px] gap-[204px]">
+    <div className="w-full min-h-screen sm:h-[580px] h-[812px] flex flex-col sm:px-[63px] px-[20px] py-[24px] ">
       <img
         src="/assets/Logo.png"
         alt="Logo"
@@ -11,7 +11,7 @@ const HeroSection = () => {
         height={24}
         className=""
       />
-      <div className="sm:w-[958px] w-[98%] sm:h-[287px] h-[303px] flex flex-col items-center sm:p-2 p-0 sm:gap-[32px] gap-[24px] mx-auto">
+      <div className="sm:w-[958px] w-[98%] sm:h-[287px] h-[303px] flex flex-col items-center sm:p-2 p-0 sm:gap-[32px] gap-[24px] mx-auto my-auto">
         <p className="w-full sm:h-[160px] h-[150px] font-semibold sm:text-[68px] text-[36px] sm:leading-[80px] leading-[50px] text-center text-gradient-to-r from-gray-500 via-gray-700 to-gray-500">
           Your photo gallery is a mess!
           <br />
