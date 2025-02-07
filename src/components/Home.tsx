@@ -17,7 +17,7 @@ const Home = () => {
       </Head>
 
       {/* Main Wrapper with Max Width */}
-      <div className="max-w-[1280px] w-full mx-auto flex flex-col gap-10">
+      <div className="max-w-[1280px] w-full mx-auto flex flex-col gap-10 ">
         <HeroSection />
         <MemoriesTrackSection />
       </div>

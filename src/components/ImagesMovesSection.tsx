@@ -6,7 +6,7 @@ const ImagesMovesSection = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setShowMobileSection(screenWidth >= 360 && screenWidth <= 375);
+      setShowMobileSection(screenWidth >= 300 && screenWidth <= 575);
     };
 
     handleResize(); // Check on mount
@@ -15,9 +15,9 @@ const ImagesMovesSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className="sm:w-[1152px] w-[343px] sm:h-[720px] h-[880px] flex flex-col mx-auto gap-[16px] mb-[160px]">
-      <div className="sm:w-[1152px] w-[343px] sm:h-[206px] h-[148px] flex flex-col items-center p-2 gap-[16px] mx-auto">
-        <p className="w-full sm:h-[160px] h-[100px] font-semibold sm:text-[68px] text-[36px] sm:leading-[80px] leading-[50px] text-center text-gradient-to-r from-gray-500 via-gray-700 to-gray-500">
+    <div className="max-w-[1152px] w-full  flex flex-col mx-auto gap-[16px] mb-[160px]">
+      <div className="max-w-[1152px] w-full flex flex-col items-center p-2 gap-[16px] mx-auto">
+        <p className="w-full  font-semibold sm:text-[68px] text-[36px] sm:leading-[80px] leading-[50px] text-center text-gradient-to-r from-gray-500 via-gray-700 to-gray-500">
           Your memories are worth everything!
         </p>
         <p className="w-full sm:h-[30px] h-[24px] font-medium sm:text-[22px] text-[18px] sm:leading-[30px] leading-[24px] text-center text-[#3D3D3D]">
@@ -25,7 +25,7 @@ const ImagesMovesSection = () => {
         </p>
       </div>
       {showMobileSection ? (
-        <div className="relative w-[343px] h-[684px] ">
+        <div className="relative w-[343px] h-[684px] mx-auto">
           <img
             src="/assets/image 1.png"
             alt="image 1"
@@ -60,7 +60,7 @@ const ImagesMovesSection = () => {
           />
         </div>
       ) : (
-        <div className="w-[1152px] h-[466px] relative mt-[32px]">
+        <div className="w-full max-w-[1152px] h-[466px] relative mt-[32px]">
           <img
             src="/assets/image 1.png"
             alt="image 1"
