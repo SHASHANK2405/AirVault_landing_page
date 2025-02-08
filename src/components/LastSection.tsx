@@ -3,13 +3,13 @@ import Card from "./Card";
 
 const LastSection = () => {
   return (
-    <div className="sm:w-[1152px] w-[343px] sm:h-[1432px] h-[2477px] flex sm:flex-col flex-col gap-[48px] items-center mx-auto mb-20">
-      <p className="sm:w-[836px] w-[343px] sm:h-[88px] h-[90px] font-medium sm:text-[32px] text-[22px] sm:leading-[44px] leading-[30px] text-center text-[#31323D]">
+    <div className="max-w-[1152px] w-full flex sm:flex-col flex-col gap-[48px] items-center mx-auto mb-20">
+      <p className="max-w-[836px] w-full font-medium sm:text-[32px] text-[22px] sm:leading-[44px] leading-[30px] text-center text-[#31323D]">
         Explore our wide selection of products that help you preserve your
         memories, in your own style.
       </p>
-      <div className="w-full sm:h-[1296px] h-[2339px] flex flex-col gap-20 items-center mt-96 sm:mt-0">
-        <div className="sm:w-fit w-full h-[640px] flex sm:flex-row flex-col gap-4 justify-center">
+      <div className="w-full flex flex-col gap-4 items-center ">
+        <div className="w-full flex md:flex-row flex-col gap-4 justify-center ">
           <Card
             GradientText={"AirVault Cloud"}
             PlainText={"is built for people who like to keep it"}
@@ -33,7 +33,7 @@ const LastSection = () => {
             Text={"AirVaultGo"}
           />
         </div>
-        <div className="relative sm:w-[1152px] w-[343px] sm:h-[640px] h-[907px] rounded-[48px] bg-[#FFFFFF] flex sm:flex-row flex-col mt-80 sm:mt-0">
+        <div className=" max-w-[1152px] w-full rounded-[48px] bg-[#FFFFFF] flex md:flex-row flex-col">
           <Card
             GradientText={"AirVault Pro"}
             PlainText={"is built for people who are hungry for"}
@@ -45,11 +45,9 @@ const LastSection = () => {
             PlainText3={""}
             Text={""}
           />
-          <img
-            src="/assets/AirVaultPro.png"
-            alt="AirVaultPro"
-            className="sm:w-[717px] w-[390px] sm:h-[550px] h-[295px] absolute sm:right-0 right-[24px] sm:top-8 top-[551px] sm:rounded-br-[48px] rounded-0"
-          />
+          <div className="max-w-[717px] w-full sm:rounded-br-[48px] rounded-0 my-auto">
+            <img src="/assets/AirVaultPro.png" alt="AirVaultPro" className="" />
+          </div>
         </div>
       </div>
     </div>

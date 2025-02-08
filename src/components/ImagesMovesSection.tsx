@@ -6,7 +6,7 @@ const ImagesMovesSection = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setShowMobileSection(screenWidth >= 300 && screenWidth <= 575);
+      setShowMobileSection(screenWidth >= 300 && screenWidth <= 775);
     };
 
     handleResize(); // Check on mount

@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
   useEffect(() => {
     setIsAirVaultGo(GradientText === "AirVaultGo");
     setIsAirVaultCloud(GradientText === "AirVaultCloud");
-  }, [GradientText]); // Runs when GradientText changes
+  }, [GradientText]);
 
   const gradientClass =
     GradientText === "AirVault Pro"
@@ -34,8 +34,8 @@ const Card: React.FC<CardProps> = ({
       : "bg-gradient-to-r from-[#4873FF] via-[#593CFF] to-[#FF3CCB]";
 
   return (
-    <div className="sm:w-[568px] w-[343px] sm:h-[640px] min-h-[700px] rounded-[48px] bg-[#FFFFFF] sm:p-[60px] p-[24px] flex flex-col gap-[24px] relative overflow-hidden">
-      <p className="sm:w-[448px] w-[295px] sm:h-[165px] h-[196px] text-left sm:text-[40px] text-[36px] mt-[40px] sm:leading-[55px] leading-[50px] font-medium text-[#58585C]">
+    <div className="max-w-[568px] w-full rounded-[48px] bg-[#FFFFFF] sm:p-[60px] p-[24px] flex flex-col gap-[24px] relative overflow-hidden pb-[120px] sm:pb-[80px]">
+      <p className="w-full text-left sm:text-[40px] text-[36px] sm:leading-[55px] leading-[50px] font-medium text-[#58585C]">
         <span
           className={clsx(
             gradientClass,
@@ -47,12 +47,13 @@ const Card: React.FC<CardProps> = ({
         {PlainText}{" "}
         <span className="text-[#31323D] font-extrabold">{BoldText}</span>
       </p>
+
       <p
         className={clsx(
           "font-medium sm:text-[22px] text-[18px] sm:leading-[30px] leading-[24px] text-[#64667A]",
           Text === "AirVaultGo"
-            ? "sm:w-[285px] w-[198px] sm:h-[150px] h-[175px]"
-            : "sm:w-[448px] w-[295px] sm:h-[90px] h-[75px]"
+            ? "max-w-[285px] w-[198px] md:w-full"
+            : "max-w-[448px] w-full"
         )}
       >
         {PlainText2}{" "}
@@ -64,27 +65,31 @@ const Card: React.FC<CardProps> = ({
         Try AirVault Now
       </button>
 
-      {/* Conditionally render images based on state */}
-      {Text === "AirVaultCloud" && (
-        <img
-          src="/assets/AirVaultCloud.png"
-          alt="AirVaultCloud"
-          className="absolute w-[272px] h-[557px] sm:w-[234px] sm:h-[480px] 
-                     sm:top-[363px] sm:left-[335px] top-[766px] left-[165px] 
-                     sm:translate-x-0 sm:translate-y-0 -translate-x-1/2 -translate-y-1/2 
-                     sm:rounded-br-[48px] z-10 "
-        />
-      )}
-      {Text === "AirVaultGo" && (
-        <img
-          src="/assets/AirVaultGo.png"
-          alt="AirVaultGo"
-          width={313}
-          height={358}
-          className="sm:w-[313px] sm:h-[358px] w-[236.6px] h-[339px] absolute sm:top-[160px] sm:left-[256px] top-[340.5px] left-[220px] 
-                     sm:translate-x-0 sm:translate-y-0 -translate-x-1/2 -translate-y-1/2 
-                     z-10"
-        />
+      {/* Image with absolute positioning, bottom and right aligned */}
+      {(Text === "AirVaultCloud" || Text === "AirVaultGo") && (
+        <div
+          className={clsx(
+            "absolute sm:w-auto sm:h-auto",
+            Text === "AirVaultCloud"
+              ? "bottom-[-15px] right-0 sm:bottom-[-30px] sm:right-[20px]" // Positioning for AirVaultCloud
+              : "bottom-[30px] right-0 sm:bottom-[10px] sm:right-[40px]" // Positioning for AirVaultGo
+          )}
+        >
+          {Text === "AirVaultCloud" && (
+            <img
+              src="/assets/AirVaultCloud.png"
+              alt="AirVaultCloud"
+              className="object-contain w-full h-full sm:rounded-br-[48px]"
+            />
+          )}
+          {Text === "AirVaultGo" && (
+            <img
+              src="/assets/AirVaultGo.png"
+              alt="AirVaultGo"
+              className="object-contain w-full h-full"
+            />
+          )}
+        </div>
       )}
     </div>
   );
